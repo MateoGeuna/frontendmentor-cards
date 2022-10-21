@@ -19,46 +19,33 @@ main {
     display: flex;
 }
 
-main section {
-    padding: 50px
-}
 
-main .section-left {
-    background-color: RED;
-    flex-basis: 30%;
+main section.section-left {
+    flex-basis: 33%;
+    background-image: url("/images/bg-main-desktop.png");
 }
 
 
-main .section-right {
-    background-color: blue;
-    flex-basis: 70%;
+main section.section-right {
+    background-color: white;
+    flex-basis: 67%;
 }
 
-
-
-
-
-
-
-form#formulario div.form-name {
-    height: 100%;
-    width: 70%;
-}
-
-div.imagenes{
-    height: 100%;
-    width: 30%;
-}
-
-div.wallpaper {
-    
+img.card {
+    width: 300px;
+    height: auto;
     position: absolute;
-    z-index: -1;
+    border-radius: 10px;
 }
 
-div.cards {
-    display: flex;
-    flex-wrap: wrap;
+img.card.card-front {
+    top: 20%;
+    left: 18%;
+}
+
+img.card.card-back {
+    top: 48%;
+    left: 22%;
 }
 
 .attribution {
