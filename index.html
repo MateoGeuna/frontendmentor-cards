@@ -14,41 +14,49 @@
 <body>
   <main>
     <section class="section-left">
-      <img class="card card-front" src="images/bg-card-front.png" alt="tarjeta-frente">
-      <img class="card card-back" src="images/bg-card-back.png" alt="tarjeta-dorso">
+      <div class="card card-front">
+        <img class="card-logo" src="/images/card-logo.svg" alt="card-logo">
+        <p class="numbers">0000 0000 0000 0000</p>
+        <div class="name-exp">
+          <p>Jane Appleseed</p>
+          <p>00/00</p>
+        </div>
+
+      </div>
+      <div class="card-back">
+        <p>000</p>
+      </div>
     </section>
-    <section class="section-right"></section>
+    <section class="section-right">
+      <form id="formulario" action="">
+        
+          <label for="card-name">CARDHOLDER NAME</label>
+          <input type="text" name="card-name" id="card-name" placeholder="Ej. Jane Appleseed ">
+        
+          <label for="card-number">CARD NUMBER</label>
+          <input type="number" name="card-number" id="card-number" placeholder="Ej. 1234 5678 9123 0000">
+        
+          <label for="date-exp">EXP. DATE (MM/YY)</label>
+          <input type="number" name="date-exp-month" id="date-exp-month" placeholder="MM">
+          <input type="number" name="date-exp-year" id="date-exp-year" placeholder="YY">
+      
+          <label for="number-security">CVC</label>
+          <input type="number" name="number-security" id="number-security" placeholder="Ej 123">
+      
+          <input type="submit" value="CONFIRMAR" id="submit" onclick="confirmCardData()">
     
-  
-  
+      </form>
+    </section>
+
+
+
   </main>
- 
- <!--   
+
+  <!--   
   </div>-->
   <!--
     
-  <form id="formulario" action="">
-    <div class="form-name">
-      <label for="card-name">CARDHOLDER NAME</label>
-      <input type="text" name="card-name" id="card-name" placeholder="Ej. Jane Appleseed ">
-    <div class="form-number">
-      <label for="card-number">CARD NUMBER</label>
-      <input type="number" name="card-number" id="card-number" placeholder="Ej. 1234 5678 9123 0000">
-    <div class="form-date">
-      <label for="date-exp">EXP. DATE (MM/YY)</label>
-      <input type="number" name="date-exp-month" id="date-exp-month" placeholder="MM">
-      <input type="number" name="date-exp-year" id="date-exp-year" placeholder="YY">
-      <p class="blank">Can´t be blank</p>
-    </div>
-    <div class="form-number-security">
-      <label for="number-security">CVC</label>
-      <input type="number" name="number-security" id="number-security" placeholder="Ej 123">
-      <p class="blank">Can´t be blank</p>
-    </div>
-    <div class="form-confirm">
-      <input type="submit" value="CONFIRMAR" id="submit" onclick="confirmCardData()">
-    </div>
-  </form>
+  
   -->
 
   <!-- Completed state start 
