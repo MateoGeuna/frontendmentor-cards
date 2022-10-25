@@ -28,22 +28,30 @@
       </div>
     </section>
     <section class="section-right">
-      <form id="formulario" action="">
-        
+      <form id="formulario" action="javascript:void(0)">
+        <div class="item-form">
           <label for="card-name">CARDHOLDER NAME</label>
           <input type="text" name="card-name" id="card-name" placeholder="Ej. Jane Appleseed ">
-        
+        </div>
+        <div class="item-form">
           <label for="card-number">CARD NUMBER</label>
           <input type="number" name="card-number" id="card-number" placeholder="Ej. 1234 5678 9123 0000">
+        </div>
+
         
+        <div class="item-form item-form-50 item-form-two-inputs" >
           <label for="date-exp">EXP. DATE (MM/YY)</label>
           <input type="number" name="date-exp-month" id="date-exp-month" placeholder="MM">
           <input type="number" name="date-exp-year" id="date-exp-year" placeholder="YY">
-      
+        </div>
+        <div class="item-form item-form-50">
           <label for="number-security">CVC</label>
           <input type="number" name="number-security" id="number-security" placeholder="Ej 123">
+        </div>
       
-          <input type="submit" value="CONFIRMAR" id="submit" onclick="confirmCardData()">
+        <div class="item-form">
+          <button id="submit" onclick="confirmCardData()">Confirm</button>
+        </div>
     
       </form>
     </section>
