@@ -12,8 +12,8 @@
     --light-grayish-violet: hsl(270, 3%, 87%);
     --dark-grayish-violet: hsl(279, 6%, 55%);
     --very-dark-violet: hsl(278, 68%, 11%);
-    --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
     /*active input borders*/
+    --linear-gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
     --red: hsl(0, 100%, 66%);
     /*input errors*/
 }
@@ -30,82 +30,12 @@ main {
     display: flex;
 }
 
+/* SECTION LEFT*/
 
 main section.section-left {
     flex-basis: 33%;
     background-image: url("/images/bg-main-desktop.png");
 }
-
-
-main section.section-right {
-    background-color: white;
-    flex-basis: 67%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
-}
-
-section.section-right form#formulario {
-    max-width: 350px;
-}
-
-section.section-right form#formulario label,
-section.section-right form#formulario input {
-    display: block;
-    width: 100%;
-}
-
-section.section-right form#formulario input {
-    border-radius: 10px;
-    border: 1px solid var(--light-grayish-violet);
-    height: 40px;
-}
-
-section.section-right form#formulario label {
-    font-size: 13px;
-}
-
-section.section-right form#formulario button {
-    font-size: 13px;
-    background-color: var(--very-dark-violet);
-    color: var(--light-grayish-violet);
-    width: 100%;
-    border-radius: 5px;
-    border-color: var(--very-dark-violet);
-    padding: 10px 0px;
-}
-
-section.section-right form#formulario div.item-form {
-    margin-bottom: 15px;
-}
-
-section.section-right form#formulario div.item-form:last-child {
-    margin-top: 15px;
-}
-
-section.section-right form#formulario div.item-form label {
-    margin-bottom: 5px;
-    color: var(--very-dark-violet);
-    font-weight: 700;
-}
-
-section.section-right form#formulario div.item-form-50 {
-    display: inline-block;
-    width: 49%;
-}
-
-section.section-right form#formulario div.item-form-two-inputs {
-    padding-right: 20px;
-}
-
-section.section-right form#formulario div.item-form-two-inputs input {
-    width: 48%;
-    display: inline-block;
-}
-
-
-
 
 div.card.card-front {
     top: 20%;
@@ -166,6 +96,86 @@ img.card-logo {
     height: auto;
     padding-left: 20px;
 }
+
+
+
+
+/*SECTION RIGHT*/
+
+main section.section-right {
+    background-color: white;
+    flex-basis: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 50px;
+}
+
+section.section-right form#formulario {
+    max-width: 350px;
+}
+
+section.section-right form#formulario label,
+section.section-right form#formulario input {
+    display: block;
+    width: 100%;
+}
+
+section.section-right form#formulario input {
+    border-radius: 10px;
+    border: 1px solid var(--light-grayish-violet);
+    height: 40px;
+}
+
+section.section-right form#formulario label {
+    font-size: 13px;
+}
+
+section.section-right form#formulario button {
+    font-size: 13px;
+    background-color: var(--very-dark-violet);
+    color: var(--light-grayish-violet);
+    width: 100%;
+    border-radius: 5px;
+    border-color: var(--very-dark-violet);
+    padding: 10px 0px;
+}
+
+section.section-right form#formulario div.item-form {
+    margin-bottom: 20px;
+}
+
+section.section-right form#formulario div.item-form:last-child {
+    margin-top: 15px;
+}
+
+section.section-right form#formulario div.item-form label {
+    margin-bottom: 5px;
+    color: var(--very-dark-violet);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+section.section-right form#formulario div.item-form-50 {
+    display: inline-block;
+    width: 49%;
+}
+
+section.section-right form#formulario div.item-form-two-inputs {
+    padding-right: 20px;
+}
+
+section.section-right form#formulario div.item-form-two-inputs input {
+    width: 48%;
+    display: inline-block;
+}
+
+
+
+
+
+
+
 
 .attribution {
     font-size: 11px;
