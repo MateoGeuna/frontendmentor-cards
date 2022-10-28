@@ -8,7 +8,11 @@ const inputNumberSecurity = document.getElementById("security-number");
 // Elementos de la card donde se muestra lo ingresado por el usuario
 
 function confirmCardData() {
-    if (inputName.value === "") {
+
+    if (inputName.value === "" || inputName.value.length > 35 || !validarLetras(inputName.value)) {
+        
+        inputNameUpperCase = inputName.value.toUpperCase();
+        //console.log(inputNameUpperCase);
         showMessaggeError("Debe colocar un nombre y apellido");
         return;
     }
@@ -41,6 +45,11 @@ function confirmCardData() {
 
 function showMessaggeError(message, type) {
     console.log(message)
+}
+
+function validarLetras(valor) {
+    //return /^[A-Z]+$/i.test(valor);
+    return /^[a-zA-ZáéíóúÁÉÍÓÚñÑ]+(?: [a-zA-ZáéíóúÁÉÍÓÚñÑ]+)*$/i.test(valor);
 }
 
 function validarAllNumbers(valor) {
