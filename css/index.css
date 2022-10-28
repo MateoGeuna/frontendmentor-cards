@@ -63,7 +63,8 @@ div.card.card-front div.name-exp {
     padding: 15px 20px;
 }
 
-div.card.card-front div.name-exp p {
+div.card.card-front div.name-exp p,
+div.card.card-front div.name-exp p#mask-card-month span {
     font-size: 13px;
 }
 

@@ -16,10 +16,10 @@
     <section class="section-left">
       <div class="card card-front">
         <img class="card-logo" src="/images/card-logo.svg" alt="card-logo">
-        <p class="numbers">0000 0000 0000 0000</p>
+        <p class="numbers" id="mask-card-number">0000 0000 0000 0000</p>
         <div class="name-exp">
-          <p id="mask-card-name">Jane Appleseed</p>
-          <p>00/00</p>
+          <p id="mask-card-name">JANE APPLESEED</p>
+          <p id="mask-card-year"><span id="mask-card-month">00</span>/00</p>
         </div>
 
       </div>
@@ -31,7 +31,7 @@
       <form id="formulario" action="javascript:void(0)">
         <div class="item-form">
           <label for="card-name">CARDHOLDER NAME</label>
-          <input type="text" name="card-name" id="card-name" placeholder="Ej. Jane Appleseed ">
+          <input type="text" name="card-name" id="card-name" maxlength="35" placeholder="Ej. Jane Appleseed ">
         </div>
         <div class="item-form">
           <label for="card-number">CARD NUMBER</label>
@@ -46,7 +46,7 @@
         </div>
         <div class="item-form item-form-50">
           <label for="security-number">CVC</label>
-          <input type="number" name="security-number" id="security-number" placeholder="Ej 123">
+          <input type="tel" maxlength="3" name="security-number" id="security-number" placeholder="Ej 123">
         </div>
       
         <div class="item-form">
