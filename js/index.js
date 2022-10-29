@@ -34,7 +34,7 @@ const changeCardNumber = document.addEventListener("input", function (){
         }
 })
 
-/*const cardExpirationMonth = document.getElementById("mask-card-month");
+const cardExpirationMonth = document.getElementById("mask-card-month");
 const placeHolderNumberMonthYear = "00";
 const changeCardExpirationMonth = document.addEventListener("input", function () {
     if(inputDateExpirationMonth.value === "") {
@@ -56,13 +56,13 @@ const changeCardExpirationYear = document.addEventListener("input", function () 
     } else {
         return
     }
-})*/
+})
 
-const cardSecurityNumber = document.getElementById("security-number");
+const cardSecurityNumber = document.getElementById("mask-security-number");
 const placeHolderSecurityNumber = "000";
 const changeCardSecurityNumber = document.addEventListener("input", function() {
     
-    if(securityNumber === "") {
+    if(inputNumberSecurity.value === "") {
         cardSecurityNumber.innerText = placeHolderSecurityNumber;
     } else if (validarAllNumbers(inputNumberSecurity.value)) {
         const securityNumber = inputNumberSecurity.value;
@@ -98,9 +98,9 @@ function confirmCardData() {
         return
     }
 
-    if (inputDateExpirationYear.value === "" || inputDateExpirationYear.value < 22
-        || inputDateExpirationYear.value > 26 || !validarAllNumbers(inputDateExpirationMonth.value) || inputDateExpirationYear.value.length != 2) {
-        showMessaggeError("Debe colocar un año entre 22 y 26");
+    if (inputDateExpirationYear.value === "" || inputDateExpirationYear.value < 23
+        || inputDateExpirationYear.value > 28 || !validarAllNumbers(inputDateExpirationMonth.value) || inputDateExpirationYear.value.length != 2) {
+        showMessaggeError("Debe colocar un año entre 23 y 28");
         return
     }
 

@@ -64,7 +64,9 @@ div.card.card-front div.name-exp {
 }
 
 div.card.card-front div.name-exp p,
-div.card.card-front div.name-exp p#mask-card-month span {
+div.card.card-front div.name-exp p#mask-card-month span,
+div.card.card-front div.name-exp p span#mask-card-month,
+div.card.card-front div.name-exp p span#mask-card-year {
     font-size: 13px;
 }
 
@@ -87,7 +89,7 @@ section.section-left div.card-back {
 section.section-left div.card-back p {
     padding-right: 35px;
     color: var(--light-grayish-violet);
-    font-size: 10px;
+    font-size: 13px;
     padding-bottom: 3px;
 }
 
