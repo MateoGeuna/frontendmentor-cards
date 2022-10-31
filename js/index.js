@@ -4,6 +4,8 @@ const inputNumber = document.getElementById("card-number");
 const inputDateExpirationMonth = document.getElementById("date-exp-month");
 const inputDateExpirationYear = document.getElementById("date-exp-year");
 const inputNumberSecurity = document.getElementById("security-number");
+const newMessageError = document.getElementById("message");
+const newMessageSuccess = document.getElementById("message");
 
 // Elementos de la card donde se muestra lo ingresado por el usuario
 
@@ -76,6 +78,11 @@ const changeCardSecurityNumber = document.addEventListener("input", function() {
 
 
 
+
+// Boton Confirmar
+
+
+
 function confirmCardData() {
 
     if (inputName.value === "" || inputName.value.length > 35 || !validarLetras(inputName.value)) {
@@ -95,25 +102,41 @@ function confirmCardData() {
     if (inputDateExpirationMonth.value === "" || inputDateExpirationMonth.value <= 0
         || inputDateExpirationMonth.value >= 13 || !validarAllNumbers(inputDateExpirationMonth.value) || inputDateExpirationMonth.value.length != 2) {
         showMessaggeError("Debe colocar un mes del 01 al 12");
-        return
+        return;
     }
 
     if (inputDateExpirationYear.value === "" || inputDateExpirationYear.value < 23
         || inputDateExpirationYear.value > 28 || !validarAllNumbers(inputDateExpirationMonth.value) || inputDateExpirationYear.value.length != 2) {
         showMessaggeError("Debe colocar un año entre 23 y 28");
-        return
+        return;
     }
 
     if (inputNumberSecurity.value === "" || !validarAllNumbers(inputNumberSecurity.value)
         || inputNumberSecurity.value.length != 3 || inputNumberSecurity.value < 000
         || inputNumberSecurity.value > 999) {
         showMessaggeError("Debe colocar sus 3 digitos de seguridad")
+        return;
     }
 
+
+    showMessageSuccess("Success")
 }
 
+
 function showMessaggeError(message, type) {
-    console.log(message)
+    newMessageError.innerHTML = `
+        <div id="message" class="error">
+            <p> ${message}
+        </div>
+    `;
+}
+
+function showMessageSuccess(message, type) {
+    newMessageSuccess.innerHTML = `
+        <div id="message" class="success">
+            <p> ${message}
+        </div>
+    `;
 }
 
 function validarLetras(valor) {

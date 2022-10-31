@@ -173,7 +173,28 @@ section.section-right form#formulario div.item-form-two-inputs input {
     display: inline-block;
 }
 
+section.section-right form#formulario div#message {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    color: white;
+    display: none;
+}
 
+section.section-right form#formulario div#message.success {
+    background: var(--linear-gradient);
+    display: block;
+}
+
+section.section-right form#formulario div#message.error {
+    background-color: var(--red);
+    display: block;
+}
+
+section.section-right form#formulario div#message p {
+    text-align: center;
+    padding: 3%;
+}
 
 
 
