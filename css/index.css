@@ -35,6 +35,7 @@ main {
 main section.section-left {
     flex-basis: 33%;
     background-image: url("/images/bg-main-desktop.png");
+    background-size: cover;
 }
 
 div.card.card-front {
@@ -200,9 +201,7 @@ section.section-right form#formulario div#message p {
 
 /* NEW CARD AFTER CONFIRM*/
 main section#success-card.section-right div.new-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 main section#success-card.section-right div.new-card img.icon-complete {
@@ -212,6 +211,7 @@ main section#success-card.section-right div.new-card img.icon-complete {
 main section#success-card.section-right div.new-card div.p {
     text-align: center;
     padding: 0px 40px;
+    margin-bottom: 30px;
 }
 
 main section#success-card.section-right div.new-card p.first {
@@ -237,9 +237,45 @@ main section#success-card.section-right div.new-card button#new-submit {
 .attribution {
     font-size: 11px;
     text-align: center;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
 
 .attribution a {
     color: hsl(228, 45%, 44%);
     text-decoration: none;
+}
+
+/* RESPONSIVE SCREEN*/
+
+@media (max-width: 600px) {
+    main {
+        flex-direction: column;
+    }
+
+    section.section-left div.card.card-front {
+        top: 20%;
+        left: 5%;
+        position: absolute;
+        z-index: 2;
+    }
+
+
+    section.section-left div.card-back {
+        top: 10%;
+        left: 20%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    main section.section-right {
+        padding-left: 10px;
+    }
+
+    main section#success-card.section-right div.new-card p.first {
+        font-weight: 600;
+        font-size: 25px;
+        letter-spacing: 4px;
+    }
 }
