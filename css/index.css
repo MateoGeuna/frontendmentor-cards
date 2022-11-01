@@ -255,6 +255,8 @@ main section#success-card.section-right div.new-card button#new-submit {
     }
 
     section.section-left div.card.card-front {
+        /*top: 20%;
+        left: 5%;*/
         top: 20%;
         left: 5%;
         position: absolute;
@@ -263,8 +265,10 @@ main section#success-card.section-right div.new-card button#new-submit {
 
 
     section.section-left div.card-back {
-        top: 10%;
-        left: 20%;
+        /*top: 10%;
+        left: 20%;*/
+        top: 7%;
+        left: 23%;
         position: absolute;
         z-index: 1;
     }
