@@ -34,14 +34,14 @@ main {
 
 main section.section-left {
     flex-basis: 33%;
-    background-image: url("/images/bg-main-desktop.png");
+    background-image: url("../images/bg-main-desktop.png");
     background-size: cover;
 }
 
 div.card.card-front {
     top: 20%;
     left: 19%;
-    background-image: url(/images/bg-card-front.png);
+    background-image: url("../images/bg-card-front.png");
     background-position: 50% 25%;
     width: 300px;
     height: 164.42px;
@@ -78,7 +78,7 @@ section.section-left div.card-back {
     height: 164.64px;
     position: absolute;
     border-radius: 10px;
-    background-image: url(/images/bg-card-back.png);
+    background-image: url("../images/bg-card-back.png");
     display: flex;
     align-content: flex-end;
     align-items: flex-end;

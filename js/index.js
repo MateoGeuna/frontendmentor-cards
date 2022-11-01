@@ -158,7 +158,7 @@ function maskCreditCardNumber(number) {
 function successNewCard(message) {
     successCard.innerHTML = `
         <div class="new-card">
-            <img class="icon-complete" src="/images/icon-complete.svg" alt="icon-complete">
+            <img class="icon-complete" src="./images/icon-complete.svg" alt="icon-complete">
             <div class="p">
                 <p class="first">
                     THANK YOU!
