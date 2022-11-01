@@ -6,6 +6,7 @@ const inputDateExpirationYear = document.getElementById("date-exp-year");
 const inputNumberSecurity = document.getElementById("security-number");
 const newMessageError = document.getElementById("message");
 const newMessageSuccess = document.getElementById("message");
+const successCard = document.getElementById("success-card");
 
 // Elementos de la card donde se muestra lo ingresado por el usuario
 
@@ -81,49 +82,51 @@ const changeCardSecurityNumber = document.addEventListener("input", function() {
 
 // Boton Confirmar
 
-
-
 function confirmCardData() {
 
     if (inputName.value === "" || inputName.value.length > 35 || !validarLetras(inputName.value)) {
 
         inputNameUpperCase = inputName.value.toUpperCase();
-        //console.log(inputNameUpperCase);
-        showMessaggeError("Debe colocar un nombre y apellido");
+        showMessaggeError("You must put name and surname");
         return;
     }
 
 
     if (inputNumber.value === "" || (inputNumber.value.length != 16) || !validarAllNumbers(inputNumber.value)) {
-        showMessaggeError("Su tarjeta debe contener 16 números");
+        showMessaggeError("Your card must contain 16 numbers");
         return;
     }
 
     if (inputDateExpirationMonth.value === "" || inputDateExpirationMonth.value <= 0
         || inputDateExpirationMonth.value >= 13 || !validarAllNumbers(inputDateExpirationMonth.value) || inputDateExpirationMonth.value.length != 2) {
-        showMessaggeError("Debe colocar un mes del 01 al 12");
+        showMessaggeError("You must put month between 01 and 12");
         return;
     }
 
     if (inputDateExpirationYear.value === "" || inputDateExpirationYear.value < 23
         || inputDateExpirationYear.value > 28 || !validarAllNumbers(inputDateExpirationMonth.value) || inputDateExpirationYear.value.length != 2) {
-        showMessaggeError("Debe colocar un año entre 23 y 28");
+        showMessaggeError("You must put year between 23 and 28");
         return;
     }
 
     if (inputNumberSecurity.value === "" || !validarAllNumbers(inputNumberSecurity.value)
         || inputNumberSecurity.value.length != 3 || inputNumberSecurity.value < 000
         || inputNumberSecurity.value > 999) {
-        showMessaggeError("Debe colocar sus 3 digitos de seguridad")
+        showMessaggeError("You must put 3 security digits")
         return;
     }
 
-
-    showMessageSuccess("Success")
+    /*inputName.value = "";
+    inputNumber.value = "";
+    inputDateExpirationMonth.value = "";
+    inputDateExpirationYear.value = "";
+    inputNumberSecurity.value = "";
+    showMessageSuccess("Success");*/
+    successNewCard();
 }
 
 
-function showMessaggeError(message, type) {
+function showMessaggeError(message) {
     newMessageError.innerHTML = `
         <div id="message" class="error">
             <p> ${message}
@@ -131,7 +134,7 @@ function showMessaggeError(message, type) {
     `;
 }
 
-function showMessageSuccess(message, type) {
+function showMessageSuccess(message) {
     newMessageSuccess.innerHTML = `
         <div id="message" class="success">
             <p> ${message}
@@ -150,4 +153,21 @@ function validarAllNumbers(valor) {
 
 function maskCreditCardNumber(number) {
     return number.replace(/(\d{4}(?!\s))/g, "$1 ");
+}
+
+function successNewCard(message) {
+    successCard.innerHTML = `
+        <div class="new-card">
+            <img class="icon-complete" src="/images/icon-complete.svg" alt="icon-complete">
+            <div class="p">
+                <p class="first">
+                    THANK YOU!
+                </p>
+                <p class="second"> 
+                    We've added your card details
+                </p>
+            </div>
+            <button id="new-submit">Continue</button>
+        </div>
+    `
 }

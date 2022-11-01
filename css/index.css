@@ -194,11 +194,44 @@ section.section-right form#formulario div#message.error {
 section.section-right form#formulario div#message p {
     text-align: center;
     padding: 3%;
+    font-size: 15px;
 }
 
 
+/* NEW CARD AFTER CONFIRM*/
+main section#success-card.section-right div.new-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+main section#success-card.section-right div.new-card img.icon-complete {
+    margin-bottom: 40px;
+}
 
+main section#success-card.section-right div.new-card div.p {
+    text-align: center;
+    padding: 0px 40px;
+}
+
+main section#success-card.section-right div.new-card p.first {
+    color: var(--very-dark-violet);
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+}
+
+main section#success-card.section-right div.new-card p.second {
+    color: var(--dark-grayish-violet);
+}
+
+main section#success-card.section-right div.new-card button#new-submit {
+    border-radius: 5px;
+    color: white;
+    background: var(--very-dark-violet);
+    border: 1px solid var(--very-dark-violet);
+    padding: 10px;
+    width: 100%;
+}
 
 
 .attribution {
